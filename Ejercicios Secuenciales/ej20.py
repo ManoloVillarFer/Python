@@ -7,7 +7,7 @@ un = float(input("Cuantas monedas de un euro tienes: "))
 cincuenta = float(input("Cuantas monedas de cincuenta céntimos tienes: "))
 veinte = float(input("Cuantas monedas de veinte céntimos tienes: "))
 diez = float(input("Cuantas monedas de diez céntimos tienes: "))
-```
+
 dos = 2 * dos
 un = 1 * un
 cincuenta = (50 * cincuenta) / 100
@@ -20,6 +20,6 @@ cincuentacentimos = 100 * cincuenta
 veintecentimos = 100 * veinte
 diez = 100 * diez
 cent = doseurosacentimos+uneuroacentimos+cincuentacentimos+veintecentimos+diez
-```
+
 # Salida por pantalla
 print("Tienes", euros, "euros y", cent, "céntimos")
