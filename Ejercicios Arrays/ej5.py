@@ -1,6 +1,5 @@
 import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
+
 """
 Date: 14/11/2022
 Author: Francisco Manuel Villar Fernández
@@ -28,10 +27,10 @@ temperatures = np.zeros(12)
 for n in range(12):
     temperatures[n] = int(input(f"Temperatura media del mes {months[n]}: "))
 
-# Modificar con pandas y mathplotlib
-
 # Recorremos el array de temperaturas
 for n in range(12):
+    print()
     print(months[n])
     for i in range(int(temperatures[n])):
-        print(".")
+        print(".", end=" ")
+    print()
