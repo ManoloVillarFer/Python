@@ -10,21 +10,8 @@ Utiliza esta función en un programa para comprobar que funciona bien. Desde la 
 pantalla, solo se debe usar print desde el programa principal.
 """
 
+from ej5 import number_to_sticks
 
-def number_to_sticks(number):
 
-    number = str(number)
-
-    # Creamos una lista para la cadena
-    sticks_list = []
-
-    # Recorremos toda la cadena
-    for n in number:
-        n = int(n)
-        # Añadimos al final de la lista la cantidad de palotes
-        sticks_list.append("|" * n)
-
-    # Le añadimos un - entre cada palote
-    palotes_list = " - ".join(sticks_list)
-
-    return palotes_list
+number = int(input("Dame un número para convertirlo al sistema de palotes: "))
+print(f"{number} convertido al sistema de palotes es: {number_to_sticks(number)}")

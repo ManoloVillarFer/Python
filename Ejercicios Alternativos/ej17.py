@@ -1,4 +1,5 @@
-""" 17. Realiza un programa que pida por teclado el resultado (dato entero)
+"""
+17. Realiza un programa que pida por teclado el resultado (dato entero)
 obtenido al lanzar un dado de seis caras y muestre por pantalla el número en letras
 (dato cadena) de la cara opuesta al resultado obtenido.
 
@@ -10,3 +11,25 @@ Ejemplo:
 Introduzca número del dado: 5
 En la cara opuesta está el "dos".
 """
+
+# Pedimos los datos
+resultado = int(input("Resultado del dado: "))
+
+# Calculos
+if resultado < 1 or resultado > 6:
+    raise ValueError("ERROR: número incorrecto.")
+elif resultado == 1:
+    resultado = "Seis"
+elif resultado == 2:
+    resultado = "Cinco"
+elif resultado == 3:
+    resultado = "Cuatro"
+elif resultado == 4:
+    resultado = "Tres"
+elif resultado == 5:
+    resultado = "Dos"
+elif resultado == 6:
+    resultado = "Uno"
+
+# Salida
+print(f"La cara opuesta es {resultado}")
