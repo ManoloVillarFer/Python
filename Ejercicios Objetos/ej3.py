@@ -238,8 +238,7 @@ class Date:
 
     # Comparadores
     def __eq__(self, compare_date):
-        return self.__year == compare_date.year and self.__month == compare_date.month and \
-               self.__day == compare_date.day
+        return self.__year == compare_date.year and self.__month == compare_date.month and self.__day == compare_date.day
 
     def __ne__(self, compare_date):
         return self.__year != compare_date.year or self.__month != compare_date.month or self.__day != compare_date.day
