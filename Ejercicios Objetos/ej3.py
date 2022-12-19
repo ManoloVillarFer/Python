@@ -123,24 +123,24 @@ class Date:
         up_year = self.__year // 100
         sub_year = self.__year % 100
 
-        century, month, k = 0, 0, 0
+        century, month, a = 0, 0, 0
 
-        # Bucle para asignar la costante "k" dependiendo del siglo de la fecha
+        # Bucle para asignar la costante "a" dependiendo del siglo de la fecha
         while up_year >= century:
             if up_year == century:
-                k = 6
+                a = 6
             century += 1
 
             if up_year == century:
-                k = 4
+                a = 4
             century += 1
 
             if up_year == century:
-                k = 2
+                a = 2
             century += 1
 
             if up_year == century:
-                k = 0
+                a = 0
             century += 1
 
         # Dependiendo del mes del año le asignaremos a dicho mes un valor para el cálculo del día de la semana
@@ -176,7 +176,7 @@ class Date:
             month = 5
 
         # Formula que calcula el dia de la semana
-        day = (self.__day + month + sub_year + (sub_year // 4) + k) % 7
+        day = (self.__day + month + sub_year + (sub_year // 4) + a) % 7
 
         # Dependiendo del resto de la operación se asigna un día de la semana
         if day == 0:
@@ -281,6 +281,7 @@ def main():
     date1 = Date(16, 11, 1999)
     print(f"Primera fecha: {date1}")
 
+    # Introducción de la segunda fecha
     date2 = Date()
     date2.day = 16
     date2.month = 12
@@ -301,8 +302,8 @@ def main():
     print(f"¿Es {date1} mayor que {date2}? {date1 > date2}")
     print(f"¿Es {date1} mayor o igual que {date2}? {date1 >= date2}")
 
-    print(f"¿Qué día de la semana fue el {date1}?: {Date.name_day(date1)}")
-    print(f"¿Qué día de la semana fue el {date2}?: {Date.name_day(date2)}")
+    print(f"¿Qué día de la semana fue el {date1}? {Date.name_day(date1)}")
+    print(f"¿Qué día de la semana fue el {date2}? {Date.name_day(date2)}")
 
 
 if __name__ == '__main__':
